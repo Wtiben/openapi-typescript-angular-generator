@@ -1,10 +1,10 @@
 {
-  "name": "openapi-typescript-angular-generator",
-  "version": "8.0.0",
+  "name": "@wtiben/openapi-typescript-angular-generator",
+  "version": "9.0.0",
   "description": "Code generator to generate angular-specific typescript (model/service/validator) from an openapi-specification.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/T-Systems-MMS/openapi-typescript-angular-generator.git"
+    "url": "git+https://github.com/Wtiben/openapi-typescript-angular-generator.git"
   },
   "scripts": {
     "build": "rollup -c && rollup -c rollup-es2015.config.js",
@@ -21,7 +21,9 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
-  "bin": "bin/ng-ts-codegen.js",
+  "bin": {
+    "openapi-typescript-angular-generator": "bin/ng-ts-codegen.js"
+  },
   "dependencies": {
     "fs-extra": "^7.0.1",
     "yargs": "^12.0.5"
@@ -37,20 +39,25 @@
   ],
   "license": "Apache-2.0",
   "peerDependencies": {
-    "@angular/forms": ">=8.0.0 <9.0.0"
+    "@angular/forms": ">=8.0.0"
   },
   "devDependencies": {
-    "@angular/common": "^8.0.0",
-    "@angular/core": "^8.0.0",
-    "@angular/forms": "^8.0.0",
-    "@angular/platform-browser": "^8.0.0",
-    "@types/jest": "^24.0.15",
-    "jest": "^24.8.0",
-    "rollup": "^1.17.0",
-    "rollup-plugin-typescript2": "^0.24.0",
-    "rxjs": "^6.5.2",
-    "ts-jest": "^24.0.2",
+    "@angular/common": "^8.2.14",
+    "@angular/core": "^8.2.14",
+    "@angular/forms": "^8.2.14",
+    "@angular/platform-browser": "^8.2.14",
+    "@types/jest": "^24.9.1",
+    "jest": "^24.9.0",
+    "rollup": "^1.32.1",
+    "rollup-plugin-typescript2": "^0.24.3",
+    "rxjs": "^6.6.3",
+    "ts-jest": "^24.3.0",
     "typescript": "3.5.3",
     "zone.js": "~0.9.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/T-Systems-MMS/openapi-typescript-angular-generator/issues"
+  },
+  "homepage": "https://github.com/T-Systems-MMS/openapi-typescript-angular-generator#readme",
+  "author": "wtiben"
 }

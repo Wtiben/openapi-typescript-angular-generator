@@ -24,7 +24,8 @@
                 ['maxlength', Validators.maxLength({{maxLength}})],
                 {{/maxLength}}
                 {{#pattern}}
-                ['pattern', Validators.pattern({{pattern}})],
+                // Unfortunately the pattern variable contains double backslashes, so we need to replace them with singular instances
+                ['pattern', Validators.pattern({{pattern}}.source.replace(/\\\\/g, '\\'))],
                 {{/pattern}}
                 {{/hasValidation}}
         ],
